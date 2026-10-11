@@ -1,0 +1,15 @@
+# Environment
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+
+# Raw downloads (re-create with the scripts / curl commands in README; ~750 MB)
+data/raw/
+
+# Large intermediate caches (rebuilt by scripts/03a_prepare_slr.py)
+data/processed/noaa_slr_*.parquet
+
+# Run logs
+outputs/phase2_console.txt
