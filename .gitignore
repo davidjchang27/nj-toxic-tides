@@ -13,3 +13,6 @@ data/processed/noaa_slr_*.parquet
 
 # Run logs
 outputs/phase2_console.txt
+
+# Private outreach drafts and tracker (contains contacts)
+outreach/
