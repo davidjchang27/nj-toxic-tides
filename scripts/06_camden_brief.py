@@ -166,7 +166,7 @@ ol {{ padding-left: 15pt; margin: 3pt 0; }} ol li {{ margin: 3pt 0; }}
 <ul>
 <li><b>{n['n_exp']} of Camden's {n['n_sites']} known contaminated sites</b> have land within 100 m that is dry today
 but would flood with 3 ft of sea-level rise. For <b>{n['n_exp_1']}</b> of them, that flooding begins at just
-<b>1 ft</b>, within New Jersey's projected range for 2050 (0.9–2.1 ft).</li>
+<b>1 ft</b>, within New Jersey's likely range for 2050 (0.9–1.7 ft). 3 ft is within the likely range for 2100 under intermediate emissions (2.2–3.8 ft).</li>
 <li><b>{n['n_active']}</b> of these sites are active cleanups, and <b>{n['n_cea']}</b> have contaminated groundwater
 under an ongoing Classification Exception Area. {n['n_fema']} of {n['n_exp']} are already in FEMA's 1% annual-chance floodplain.</li>
 <li>About <b>{n['near_3']:,} residents ({pct_near3:.0%} of the city)</b> live within 1 km of one of these sites.
@@ -224,7 +224,7 @@ land within 100 m of its mapped point floods at ≤3 ft. This is a <b>screening 
 addresses, the NOAA layers model permanent inundation only (not storm surge, which reaches farther), and the analysis does
 not predict that any specific site will release contamination. Statewide comparison: OBC residents are {state['ratio']:.1f}×
 (95% CI {state['lo']:.1f}–{state['hi']:.1f}) as likely as other residents to live within 1 km of a flood-exposed contaminated site.
-Projection range: NJ Science and Technical Advisory Panel (2019).
+Projections: NJ Science and Technical Advisory Panel, <i>New Jersey's Rising Seas and Changing Coastal Storms</i> (2025).
 Contact: {CONTACT}.</p>
 </body></html>"""
 

@@ -17,8 +17,8 @@ depend on the definition (see the sensitivity table and forest plot).
 Primary definition: land within 100 m of the site that is dry today floods at <=3 ft of
 sea-level rise (see 03b_new_inundation_near_sites.py; NOAA layers include today's water, so a
 plain buffer test would flag every waterfront site).
-  - 3 ft ~ NJ's central 2100 projection (2019 STAP / later Rutgers update) and above the
-    2050 likely range of 0.9-2.1 ft.
+  - 3 ft is within NJ's likely 2100 range under intermediate emissions (2.2-3.8 ft; 2025 NJ
+    STAP report). 1 ft is within the likely 2050 range (0.9-1.7 ft).
   - 100 m allows for KCSL coordinates that are approximate address points, not parcels.
   NOTE: this definition was fixed after the Phase 1 descriptive look, so it is not
   pre-registered. That is why all definitions are reported side by side.
@@ -252,7 +252,7 @@ if __name__ == "__main__":
         "Excl. home heating-oil tanks (UHOT)": ~sites["LEAD"].eq("UHOT"),
         "Active cleanup only (excl. post-remediation, UHOT)":
             ~sites["STATUS"].eq("Active - Post Rem") & ~sites["LEAD"].eq("UHOT"),
-        "Complex sites only (remedial level C2/C3/D)": sites["REM_LEVEL"].isin(["C2", "C3", "D"]),
+        "Remedial level C2, C3 or D only": sites["REM_LEVEL"].isin(["C2", "C3", "D"]),
     }
     sens = pd.DataFrame([site_level(sites[m], primary[m], name) for name, m in subsets.items()])
     sens.to_csv(TABLES / "site_level_sensitivity_primary.csv", index=False)
